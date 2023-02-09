@@ -4,12 +4,34 @@
  * For the full copyright and license information, please view the LICENSE file that was distributed with this source code.
  */
 
-export default {
+/**
+ * The ESBuild otpions used for both build and test.
+ */
+export const commonOptions = {
+    sourcemap: true,
+    jsx: 'transform',
+};
+
+/**
+ * The ESBuild compile options when build te App.
+ */
+export const buildOptions = {
+    ...commonOptions,
+
     entryPoints: [
-        './src/app.jsx',
+        './src/main.jsx',
     ],
     bundle: true,
     outdir: 'app',
     minify: true,
-    sourcemap: true,
+}
+
+/**
+ * The test compile options, used by ESBuild <-> Jest bridge.
+ */
+export const testOptions = {
+    ...commonOptions,
+
+    format: 'cjs',
+    loader: 'tsx',
 };

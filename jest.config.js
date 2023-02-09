@@ -4,8 +4,10 @@
  * For the full copyright and license information, please view the LICENSE file that was distributed with this source code.
  */
 
-import { build } from 'esbuild';
-
-import { buildOptions as options } from './_config.mjs';
-
-build(options);
+/** @type {require('jest').Config} */
+export default {
+    transform: {
+        '(\\.[jt]sx|\\.css)?$': './bin/test.mjs',
+    },
+    testEnvironment: 'jsdom',
+};

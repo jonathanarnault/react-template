@@ -4,8 +4,9 @@
  * For the full copyright and license information, please view the LICENSE file that was distributed with this source code.
  */
 
-import { build } from 'esbuild';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import { buildOptions as options } from './_config.mjs';
+import { App } from './App';
 
-build(options);
+ReactDOM.render(<App />, document.body);

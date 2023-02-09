@@ -4,10 +4,10 @@
  * For the full copyright and license information, please view the LICENSE file that was distributed with this source code.
  */
 
-import React, { FunctionComponent, ReactElement } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
+import type { FunctionComponent, ReactElement } from 'react';
 
-import './app.css';
+import './App.css';
 
 /**
  * This is the app entrypoint.
@@ -15,8 +15,6 @@ import './app.css';
  * @param       props       The app properties.
  * @returns     The React Application
  */
-const App: FunctionComponent<{}> = ({ }: object): ReactElement => {
+export const App: FunctionComponent<{}> = ({ }: object): ReactElement => {
     return <>Hello World!</>
 };
-
-ReactDOM.render(<App />, document.body);
