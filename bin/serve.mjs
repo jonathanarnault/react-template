@@ -6,7 +6,7 @@
 
 import { context } from 'esbuild';
 
-import options from './_config.mjs';
+import { buildOptions as options } from './_config.mjs';
 
 (async () => {
     const ctx = await context(options);
