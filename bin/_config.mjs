@@ -17,10 +17,14 @@ export const commonOptions = {
  */
 export const buildOptions = {
     ...commonOptions,
-
     entryPoints: [
         './src/main.jsx',
     ],
+    assetNames: 'assets/[name]-[hash]',
+    loader: {
+        '.png': 'file',
+        '.jpg': 'file',
+    },
     bundle: true,
     outdir: 'app',
     minify: true,
@@ -31,7 +35,10 @@ export const buildOptions = {
  */
 export const testOptions = {
     ...commonOptions,
-
+    loader: {
+        '.png': 'dataurl',
+        '.jpg': 'dataurl',
+    },
     format: 'cjs',
     loader: 'tsx',
 };

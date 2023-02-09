@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "React Application Template",
   "scripts": {
-    "tsc": "npx tsc --esModuleInterop --skipLibCheck --jsx react --noEmit src/*.tsx",
+    "tsc": "tsc --noEmit",
     "prebuild": "npm run tsc",
     "build": "node ./bin/build.mjs",
     "start": "node ./bin/serve.mjs",
