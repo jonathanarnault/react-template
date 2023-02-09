@@ -12,4 +12,5 @@
 /node_modules
 
 # App
-/app/main.*
+/app/*
+!/app/index.html

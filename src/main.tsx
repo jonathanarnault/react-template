@@ -8,5 +8,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { App } from './App';
+import { Logo } from './components/Logo'
 
-ReactDOM.render(<App />, document.body);
+ReactDOM.render(<><Logo /><App /></>, document.body);
